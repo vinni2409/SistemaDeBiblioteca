@@ -10,6 +10,9 @@ public class Library {
     public void AddBook(Book book) {
         if (searchBook(book.getIsbn()) != null) {
             System.out.println("A book with ISBN " + book.getIsbn() + " already exists.");
+        }else{
+            BookList.add(book);
+            System.out.println("Book: " + book.getTitle() + ", added successfully.");
         }
     }
 
